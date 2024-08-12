@@ -281,7 +281,23 @@ object MojoImplementation {
           }
         val javaHome = Some(abs(mojo.getJavaHome().getParentFile.getParentFile))
         val mainClass = if (launcher.getMainClass().isEmpty) None else Some(launcher.getMainClass())
-        val platform = Some(Config.Platform.Jvm(Config.JvmConfig(javaHome, launcher.getJvmArgs().toList), mainClass, None, None, None))
+        val platform = Some(
+          Config
+            .Platform
+            .Jvm(
+              Config
+                .JvmConfig(
+                  javaHome,
+                  launcher
+                    .getJvmArgs()
+                    .toList
+                ),
+              mainClass,
+              None,
+              None,
+              None
+            )
+        )
         val resources = Some(resources0.asScala.toList.flatMap{
           case a: Resource => Option(Paths.get(a.getDirectory()))
           case _ => None

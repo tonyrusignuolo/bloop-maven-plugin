@@ -16,7 +16,39 @@ public class ExtendedScalaContinuousCompileMojo extends ScalaContinuousCompileMo
     }
 
     public List<String> getScalacArgs() throws Exception {
-        return super.getScalacOptions();
+        List<String> args = super.getScalacOptions();
+        // args.add("--add-opens");
+        // args.add("java.base/java.io=ALL-UNNAMED");
+        // args.add("--add-opens");
+        // args.add("java.base/java.lang=ALL-UNNAMED");
+        // args.add("--add-opens");
+        // args.add("java.base/java.lang.reflect=ALL-UNNAMED");
+        // args.add("--add-opens");
+        // args.add("java.base/java.net=ALL-UNNAMED");
+        // args.add("--add-opens=java.base/java.nio=ALL-UNNAMED");
+        // args.add("--add-opens");
+        // args.add("java.base/sun.nio.ch=ALL-UNNAMED");
+        // args.add("--add-opens=java.base/sun.nio.ch=ALL-UNNAMED");
+        // args.add("--add-opens");
+        // args.add("java.base/java.nio.file=ALL-UNNAMED");
+        // args.add("--add-opens");
+        // args.add("java.base/java.time=ALL-UNNAMED");
+        // args.add("--add-opens");
+        // args.add("java.base/java.util=ALL-UNNAMED");
+        // args.add("--add-opens");
+        // args.add("java.base/sun.util.calendar=ALL-UNNAMED");
+        // args.add("--add-opens");
+        // args.add("java.base/java.util.concurrent=ALL-UNNAMED");
+        // args.add("--add-exports=java.base/sun.nio.ch=ALL-UNNAMED");
+        // args.add("--add-exports");
+        // args.add("java.base/sun.nio.ch=ALL-UNNAMED");
+        // args.add("--add-exports");
+        // args.add("java.base/sun.security.jca=ALL-UNNAMED");
+        // args.add("--add-exports");
+        // args.add("java.base/sun.security.util=ALL-UNNAMED");
+        // args.add("--add-exports");
+        // args.add("java.base/sun.util.calendar=ALL-UNNAMED");
+        return args;
     }
 
     public List<File> getCompileSourceDirectories() throws Exception {
